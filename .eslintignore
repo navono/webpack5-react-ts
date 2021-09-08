@@ -3,4 +3,3 @@ dist
 webpack
 .eslintrc.js
 webpack.config.babel.js
-*.d.ts
