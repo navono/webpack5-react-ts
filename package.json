@@ -11,16 +11,16 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git@github.com:glook/webpack-typescript-react.git"
+        "url": "git@github.com:navono/webpack5-react-ts.git"
     },
     "license": "MIT",
-    "author": "Andrey Polyakov <andrey@polyakov.im>",
     "main": "webpack.config.babel.js",
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack --config webpack.config.babel.js",
         "profile": "cross-env NODE_ENV=production webpack --profile --json --config webpack.config.babel.js > ./dist/profile.json && webpack-bundle-analyzer ./dist/profile.json",
         "start": "cross-env WEBPACK_IS_DEV_SERVER=true NODE_ENV=development webpack serve --config webpack.config.babel.js",
-        "release": "npm version patch"
+        "release": "npm version patch",
+        "lint": "eslint --fix ./src"
     },
     "husky": {
         "hooks": {
@@ -34,8 +34,8 @@
         "@types/react-dom": "^16.9.8",
         "classnames": "^2.2.6",
         "normalize.css": "^8.0.1",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1"
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     },
     "devDependencies": {
         "@babel/core": "~7.12.3",
@@ -99,7 +99,7 @@
         "svg-url-loader": "~6.0.0",
         "terser-webpack-plugin": "~5.0.1",
         "ts-loader": "~8.0.7",
-        "typescript": "~4.0.3",
+        "typescript": "^4.4.2",
         "url-loader": "~4.1.1",
         "webpack": "~5.24.2",
         "webpack-bundle-analyzer": "~4.1.0",
