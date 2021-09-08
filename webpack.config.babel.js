@@ -1,6 +1,3 @@
-/**
- * Created by: Andrey Polyakov (andrey@polyakov.im)
- */
 import merge from 'webpack-merge';
 
 import baseConfig from './webpack/base';
@@ -9,4 +6,4 @@ import prodConfig from './webpack/prod';
 import {isProd} from './webpack/utils/env';
 
 export default () =>
-    isProd ? merge(baseConfig, prodConfig) : merge(baseConfig, devConfig);
+  isProd ? merge(baseConfig, prodConfig) : merge(baseConfig, devConfig);
