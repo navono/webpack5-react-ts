@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/no-extraneous-dependencies */
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const config = {

@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * Resource list for sass-resource-loader
  * @see https://github.com/shakacode/sass-resources-loader

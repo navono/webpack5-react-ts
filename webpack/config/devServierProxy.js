@@ -1,7 +1,8 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * @see https://webpack.js.org/configuration/dev-server/#devserverproxy
  */
-import {pathRewrite} from '../utils/helpers';
+import { pathRewrite } from '../utils/helpers';
 
 const httpProxyTarget = {
   port: 80,

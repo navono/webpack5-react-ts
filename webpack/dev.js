@@ -1,6 +1,8 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/no-extraneous-dependencies */
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
-import {devServerConfig} from './config';
+import { devServerConfig } from './config';
 
 export default {
   devtool: 'cheap-module-source-map',

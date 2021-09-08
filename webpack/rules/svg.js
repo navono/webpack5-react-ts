@@ -1,4 +1,4 @@
-import {babelLoader} from './useLoaderRuleItems';
+import { babelLoader } from './useLoaderRuleItems';
 
 /**
  * Using @svgr/webpack for handling svg files in react components
@@ -25,7 +25,7 @@ export const svgReactComponentRule = {
  */
 export const svgRule = {
   test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-  issuer: {not: [/\.[jt]sx$/]},
+  issuer: { not: [/\.[jt]sx$/] },
   type: 'asset/inline',
 };
 

@@ -1,9 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /**
  * @see https://webpack.js.org/configuration/dev-server/
  */
 import isWindows from 'is-windows';
 
-import {devServerProxyConfig} from './devServierProxy';
+import { devServerProxyConfig } from './devServierProxy';
 
 const defaultPort = 8080;
 
@@ -15,7 +16,7 @@ export const devServerConfig = {
   publicPath: '/',
   port: defaultPort,
   historyApiFallback: true,
-  headers: {'Access-Control-Allow-Origin': '*'},
+  headers: { 'Access-Control-Allow-Origin': '*' },
   proxy: devServerProxyConfig,
   hot: true,
   overlay: false,

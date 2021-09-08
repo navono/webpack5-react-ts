@@ -1,9 +1,10 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * @see https://webpack.js.org/configuration/dev-server/
  */
-import {join} from 'path';
+import { join } from 'path';
 
-import {rootDir} from '../utils/env';
+import { rootDir } from '../utils/env';
 
 export const aliasItems = {
   '@src': join(rootDir, '/src'),

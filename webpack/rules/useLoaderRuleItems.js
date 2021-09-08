@@ -1,9 +1,12 @@
-import {join} from 'path';
+/* eslint-disable @typescript-eslint/indent */
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/prefer-default-export */
+import { join } from 'path';
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-import {sassResourceItems} from '../config';
-import {isProd, rootDir, webpackDir} from '../utils/env';
+import { sassResourceItems } from '../config';
+import { isProd, rootDir, webpackDir } from '../utils/env';
 
 export const cssLoader = {
   loader: 'css-loader',
@@ -18,6 +21,7 @@ export const sassLoaderItems = [
     options: {
       sourceMap: true,
       // Prefer `dart-sassRules`
+      // eslint-disable-next-line global-require
       implementation: require('sass'),
     },
   },
@@ -41,7 +45,7 @@ export const postCssLoader = {
   },
 };
 
-/***
+/** *
  * Using MiniCssExtractPlugin in production or style-loader in development
  * @see https://webpack.js.org/plugins/mini-css-extract-plugin/#root
  * @see https://webpack.js.org/loaders/style-loader/#root

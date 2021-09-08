@@ -1,4 +1,6 @@
-import {DefinePlugin} from 'webpack';
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/no-extraneous-dependencies */
+import { DefinePlugin } from 'webpack';
 
 /**
  * @example
@@ -6,7 +8,7 @@ import {DefinePlugin} from 'webpack';
  *     isProd: true
  * }
  */
-import {isDev, isDevServer, isProd, mode} from '../utils/env';
+import { isDev, isDevServer, isProd, mode } from '../utils/env';
 
 const config = {
   'process.env': {
