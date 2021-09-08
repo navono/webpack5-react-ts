@@ -16,9 +16,9 @@
     "license": "MIT",
     "main": "webpack.config.babel.js",
     "scripts": {
-        "build": "cross-env NODE_ENV=production webpack --config webpack.config.babel.js",
+        "build": "cross-env NODE_ENV=production webpack --progress --config webpack.config.babel.js",
         "profile": "cross-env NODE_ENV=production webpack --profile --json --config webpack.config.babel.js > ./dist/profile.json && webpack-bundle-analyzer ./dist/profile.json",
-        "start": "cross-env WEBPACK_IS_DEV_SERVER=true NODE_ENV=development webpack serve --config webpack.config.babel.js",
+        "start": "cross-env WEBPACK_IS_DEV_SERVER=true NODE_ENV=development webpack serve --progress --config webpack.config.babel.js",
         "release": "npm version patch",
         "lint": "eslint --fix --ext .tsx,ts ./src"
     },
