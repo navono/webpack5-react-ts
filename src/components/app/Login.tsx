@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Redirect, useLocation } from 'react-router-dom';
 
-export default function Login() {
+type AuthenticateCb = () => void;
+
+const Login = (): React.ReactElement => {
   const { state } = useLocation();
   const { from } = (state as any) || { from: { pathname: '/' } };
   const [redirectToReferrer, setRedirectToReferrer] = useState(false);
@@ -27,12 +29,14 @@ export default function Login() {
       </button>
     </div>
   );
-}
+};
+
+export default Login;
 
 /* A fake authentication function */
 export const fakeAuth = {
   isAuthenticated: false,
-  authenticate(cb: any): void {
+  authenticate(cb: AuthenticateCb): void {
     this.isAuthenticated = true;
     // eslint-disable-next-line @typescript-eslint/no-implied-eval
     setTimeout(cb, 100);
